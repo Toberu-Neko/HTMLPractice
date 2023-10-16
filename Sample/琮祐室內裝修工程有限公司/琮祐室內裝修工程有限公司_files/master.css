@@ -1,0 +1,76 @@
+body{font-family:  "微軟正黑體", "Microsoft JhengHei","AVGARDD_0";font-size: 16px !important}
+
+header{width: 100%;max-width: 100%;height: auto;display: flex;align-items: center;margin: 0 auto;position: fixed;top: 0;z-index: 999;left: 0;right: 0;padding: 17px 0;}
+
+/*-----共用-----*/
+#navbar,#logo{
+	transition:all .5s;
+}
+
+/*-----HEADER-----*/
+.header{
+	width: 90%;
+	max-width: 1300px;
+	margin:0 auto;
+	display:flex;
+	justify-content: space-between;
+}
+
+.logo_link .logo{
+	width:65px
+}
+.company{
+	font-family: "notos";
+	font-size: 20px;
+	color: #fff;
+	font-weight: 900;
+	margin-left: 20px;
+	margin-top: 0px;
+}
+.logo_link a{
+	display:flex;
+	align-items: center;
+}
+.header nav{
+	display:flex;
+	align-items:center;
+}
+nav a{
+	height: 100%;
+	color:#fff;
+	display: flex;
+	font-size: 17px;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+	margin: 0 25px;
+	text-shadow: 0 0 5px #3c3c3c;
+	position: relative;
+	transition: all .5s;
+}
+.nav_box{
+	display:flex
+}
+.link{
+	display:flex;
+	align-items:center;
+	position: relative;
+}
+.link > a{
+	width:11px;
+	margin-right:20px;
+	margin-left:7px
+}
+nav a:after{
+	content:'';
+	display:block;
+	position:absolute;
+	width:0;
+	height: 1px;
+	background-color: #fff;
+	bottom: 20px;
+	transition:all .5s
+}
+nav a:hover:after{
+	width:100%
+}
