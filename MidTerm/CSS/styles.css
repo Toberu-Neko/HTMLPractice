@@ -1,0 +1,128 @@
+body{
+    padding-top: 100px;
+}
+
+h1{    
+    font-family: Arial, sans-serif; /* 使用 Arial 字体，如果 Arial 不可用，则使用任何无衬线字体 */
+
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container{
+    width: 820px;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* 頭 */
+
+.header{
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+h1.logo{
+    display: block;
+    margin-top: 18px;
+    float: left;
+}
+
+h1.logo a{
+    display: block;
+    width: 230px;
+    height: 46px;
+    /*text-indent: -5000px;*/
+}
+
+/* 超連結 */
+
+.nav{
+    background-color: darkolivegreen;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+}
+
+.nav-list li {
+    list-style: none;
+    margin-right: 50px;
+    margin-left: 50px;
+    align-self: center;    
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+
+}
+.nav-list li:after {
+    content: ""; 
+    position: absolute; 
+    right: -50px; 
+    height: 30px; 
+    width: 2px;
+    background-color: white; 
+}
+
+.nav-list li:first-child:before {
+    content: ""; 
+    position: absolute; 
+    left: -50px; 
+    height: 30px;
+    width: 2px; 
+    background-color: white; 
+}
+
+.nav-list li a { 
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+/* 圖片 */
+
+.banner{
+    padding: 0 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+/* 新聞 */
+
+.news{
+    padding: 0 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.news-item{
+    display: flex;
+    justify-content: center;
+}
+
+.news-item li{
+    list-style: none;
+    margin-right: 50px;
+    margin-left: 50px;
+    align-self: center;    
+    position: relative; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
