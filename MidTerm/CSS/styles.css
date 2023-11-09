@@ -5,15 +5,21 @@ body{
 h1{    
     font-family: Arial, sans-serif; /* 使用 Arial 字体，如果 Arial 不可用，则使用任何无衬线字体 */
 
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
+    color: rgb(69, 153, 139);
 }
 
 .container{
-    width: 820px;
+    width: 1000px;
     height: auto;
     margin: 0 auto;
+}
+
+.body-container{
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 /* 頭 */
@@ -21,31 +27,33 @@ h1{
 .header{
     background-color: blanchedalmond;
     width: 100%;
-    height: 100px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 h1.logo{
     display: block;
-    margin-top: 18px;
+    margin-top: 12px;
     float: left;
 }
 
 h1.logo a{
-    display: block;
-    width: 230px;
-    height: 46px;
+    display: flex;
+    height: 50px;
     /*text-indent: -5000px;*/
 }
+
+
 
 /* 超連結 */
 
 .nav{
-    background-color: darkolivegreen;
-    height: 75px;
+    background-color: rgb(69, 153, 139);
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,7 +75,6 @@ h1.logo a{
     display: flex; 
     justify-content: center; 
     align-items: center;
-
 }
 .nav-list li:after {
     content: ""; 
@@ -96,7 +103,6 @@ h1.logo a{
 /* 圖片 */
 
 .banner{
-    padding: 0 50px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -105,7 +111,7 @@ h1.logo a{
 /* 新聞 */
 
 .news{
-    padding: 0 50px;
+    padding: 20px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
@@ -118,6 +124,7 @@ h1.logo a{
 
 .news-item li{
     list-style: none;
+    padding: 5px;
     margin-right: 50px;
     margin-left: 50px;
     align-self: center;    
@@ -125,4 +132,133 @@ h1.logo a{
     display: flex; 
     justify-content: center; 
     align-items: center;
+}
+
+.news-item li::after{
+    content: ""; 
+    position: absolute; 
+    top: 32px;
+    height: 1px; 
+    width: 500px;
+    background-color: rgb(69, 153, 139);
+}
+
+.news-item li span{
+    list-style: none;
+    color: rgb(69, 153, 139);
+    text-decoration: none;
+}
+
+.news-item li a{
+    list-style: none;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+/* 簡介 */
+
+.intro{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: rgb(255, 241, 223);
+}
+
+.intro-items{
+    
+    display: flex;
+}
+
+.intro .content{
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.intro img{
+    padding: 20px;
+    height: 30%;
+    width: 30%;
+}
+
+/* 教授 */
+.professors{
+    width: 220px;
+    padding: 15px 30px;
+    float: left;
+}
+
+.teacher-slot{
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(69, 153, 139);
+    border-radius: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 250px;
+    height: 120px;
+    padding: 10px;
+    display: flex;
+    margin: 10px;
+}
+
+.teacher-slot img{
+    width: 80px;
+}
+
+.teacher-slot p{
+    text-align: center;
+}
+
+/* 課程 */
+.schedule{
+    width: 700px;
+    padding: 15px 150px;
+    margin-bottom: 40px;
+    float: right;
+}
+
+.schedule table {
+    border-collapse: collapse;
+    width: 600px;
+}
+
+.schedule th {
+    border: 1px solid #ddd;
+    width: 60px;
+    padding: 8px;
+    text-align: center;
+}
+
+.schedule tr:nth-child(1) {
+    background-color: rgb(69, 153, 139);
+}
+
+.schedule tr:nth-child(2n+2), .schedule tr:nth-child(6) {
+    background-color: white;
+}
+
+.schedule tr:nth-child(2n+3), .schedule tr:nth-child(5) {
+    background-color: rgb(216, 216, 216);
+}
+
+/* 頁尾 */
+footer {
+    width: 100%;
+}
+
+.upper-footer {
+    background-color: rgb(69, 153, 139);
+    color: white;
+    padding: 14px;
+    text-align: center;
+}
+
+.lower-footer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>1108作業</title>
+</head>
+<body>
+    <select id="year"></select>
+    <select id="month"></select>
+    <select id="day"></select>
+
+    <script>
+        var monthArray = new Array('一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月','十月', '十一月', '十二月');
+
+        window.onload = function() {
+            var yearSelect = document.getElementById('year');
+            var monthSelect = document.getElementById('month');
+            var daySelect = document.getElementById('day');
+
+            for (var i = 2000; i <= 2030; i++) {
+                var option = document.createElement('option');
+                option.text = i;
+                option.value = i;
+                yearSelect.appendChild(option);
+            }
+
+            for (var i = 1; i <= 12; i++) {
+                var option = document.createElement('option');
+                option.text = monthArray[i-1];
+                option.value = i;
+                monthSelect.appendChild(option);
+            }
+
+            monthSelect.onchange = updateDays;
+            yearSelect.onchange = updateDays;
+            updateDays();
+
+            function updateDays() {
+                var year = yearSelect.value;
+                var month = monthSelect.value;
+                var days;
+                
+                
+                if (month == 2) {
+                    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                    days = 29;
+                    } else {
+                    days = 28;
+                    }
+                } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+                    days = 30;
+                } else {
+                    days = 31;
+                }
+                
+                
+                while (daySelect.firstChild) {
+                    daySelect.removeChild(daySelect.firstChild);
+                }
+                
+                
+                for (var i = 1; i <= days; i++) {
+                    var option = document.createElement('option');
+                    option.text = i;
+                    option.value = i;
+                    daySelect.appendChild(option);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
