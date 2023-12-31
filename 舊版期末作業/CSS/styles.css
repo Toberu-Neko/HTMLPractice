@@ -1,0 +1,148 @@
+p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.head-pic{
+    width: 100%; 
+    height: 80px;
+}
+
+.loader{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222222;
+    transition: opacity 2s, visibility 2s;
+    z-index: 3;
+}
+
+.loader--hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.cube{
+    content: "";
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    background: #009578;
+
+    animation: rotate-block 1.5s infinite;
+    animation-direction: alternate;
+}
+
+@keyframes rotate-block {
+    from{
+        transform:translateX(0px) scale(0.5) rotate(0deg);
+        border-radius: 50%;
+    }
+
+    to{
+        transform:translateX(0px) scale(1) rotate(720deg);
+        border-radius: 10%;
+    }
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: clip;
+}
+
+.link{
+    text-align: right;
+}
+
+.conclusion{
+    border-top: 3px solid gray;
+    border-bottom: 3px solid gray;
+    font-size: 20px;
+    font-weight: bold;
+    color: blue;
+}
+
+.justify-content-center{
+    justify-content: center !important;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.page-text {
+    font-size: 20px;
+    line-height: 1.85em;
+    letter-spacing: 1px;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    padding: 10px 0;
+}
+
+.loaded{
+    opacity: 1;
+}
+
+.container {
+    max-width: 1500px;
+    margin: auto;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #5a70778b;
+}
+.img-hover{
+  z-index: 0;
+  position: relative;
+  max-width: 100%;
+}
+
+.image{
+    width: 80%;
+    transition: transform 0.2s;
+}
+
+.image:hover{
+    transform: scale(1.1);
+}
+
+.img-hover:hover .overlay {
+    opacity: 0.8;
+    animation: change-scale 0.2s ease-in-out;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+@keyframes change-scale {
+    from{
+        transform:scale(1.1);
+    }
+
+    to{
+        transform:scale(1);
+    }
+}
