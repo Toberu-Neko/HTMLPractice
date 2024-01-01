@@ -1,0 +1,73 @@
+.navbar a {
+    color: rgba(255, 235, 235, 1);
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-toggler {
+    border-color: white; /* 將 Icon 的邊框顏色設置為白色 */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* 將 Icon 的顏色設置為白色 */
+}
+.custom-img {
+    width: 100%;   /* 讓圖片的寬度等於卡片的寬度 */
+    height: 200px; /* 設置圖片的高度 */
+    object-fit: cover; /* 讓圖片在保持其寬高比的情況下填充整個圖片框 */
+}
+
+.custom-card {
+    position: relative; /* 將卡片的定位設置為相對定位 */
+    /* 其他的 CSS 規則 */
+}
+
+.card-text {
+    position: absolute; /* 將文字的定位設置為絕對定位 */
+    bottom: 0; /* 將文字放在底部 */
+    left: 0; /* 將文字放在左邊 */
+    color: rgba(107, 0, 0, 1); /* 將文字的顏色設置為白色，以便在深色的圖片上看得清楚 */
+    padding: 10px; /* 為文字添加一些內邊距，以便與邊緣有一些距離 */
+}
+
+.video-background {
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+}
+
+.video-foreground,
+.video-background iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.custum-container{
+    color: rgba(107, 0, 0, 1);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+h1{
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.max-width{
+    width: 100%; 
+    background-color: rgba(107, 0, 0, 1);
+}
+
+.max-width h1{
+    color: rgba(255, 235, 235, 1);
+    font-size: 2rem;
+    padding-bottom: 2rem;
+}
+
+.max-width h4{
+    color: rgba(255, 235, 235, 1);
+    font-size: 1.5rem;
+}
